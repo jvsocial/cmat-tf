@@ -3,3 +3,9 @@ resource "null_resource" "sandbox" {
     command = "echo all is well"
   }
 }
+
+resource "null_resource" "sandbox2" {
+  provisioner "local-exec" {
+    command = "echo all is well >> temp.txt"
+  }
+}
